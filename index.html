@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="«Точка и клик» — каталог point-and-click квестов: жанр, год выпуска, сложность загадок и время прохождения.">
+  <title>«Точка и клик» — каталог point-and-click квестов</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html">
+        <span class="logo__mark" aria-hidden="true">◆</span>
+        <span class="logo__text">Точка и клик</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li><a href="#catalog">Каталог</a></li>
+          <li><a href="#how">Как пользоваться</a></li>
+          <li><a href="#about">О проекте</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section hero" aria-labelledby="hero-title">
+      <div class="container">
+        <h1 id="hero-title">Каталог point-and-click квестов</h1>
+        <p class="hero__lead">
+          «Точка и клик» собирает приключенческие игры, в которых историю двигают
+          внимательность и курсор, а не скорость реакции. Каждая карточка каталога —
+          это короткое описание квеста и его главные характеристики: жанр, год выпуска,
+          сложность загадок и примерное время прохождения.
+        </p>
+
+        <ul class="hero__facts">
+          <li><strong>6</strong> квестов в каталоге</li>
+          <li><strong>5</strong> жанров</li>
+          <li><strong>3–9 ч</strong> время прохождения</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section filters" id="filters" aria-labelledby="filters-title">
+      <div class="container">
+        <div class="panel">
+          <h2 id="filters-title">Поиск по каталогу</h2>
+          <p class="section-note">
+            Заполните любое количество полей — сейчас форма только собирает условия,
+            поиск по ним появится в следующих лабораторных работах.
+          </p>
+
+          <form class="filter-form" action="index.html" method="get">
+            <div class="filter-form__fields">
+
+              <div class="field">
+                <label for="q">Название или ключевое слово</label>
+                <input type="search" id="q" name="q" placeholder="Например, маяк" autocomplete="off">
+              </div>
+
+              <div class="field">
+                <label for="genre">Жанр</label>
+                <select id="genre" name="genre">
+                  <option value="">Все жанры</option>
+                  <option value="detective">Детектив</option>
+                  <option value="mystic">Мистика и хоррор</option>
+                  <option value="comedy">Комедия</option>
+                  <option value="scifi">Научная фантастика</option>
+                  <option value="fantasy">Фэнтези</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="difficulty">Сложность загадок</label>
+                <select id="difficulty" name="difficulty">
+                  <option value="">Любая сложность</option>
+                  <option value="easy">Низкая</option>
+                  <option value="medium">Средняя</option>
+                  <option value="hard">Высокая</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="year">Выпущен не раньше</label>
+                <input type="number" id="year" name="year" min="1990" max="2026" step="1"
+                       placeholder="2018" inputmode="numeric">
+              </div>
+
+              <div class="field field--checkbox">
+                <input type="checkbox" id="short" name="short" value="1">
+                <label for="short">Только короткие (до 5 часов)</label>
+              </div>
+
+            </div>
+
+            <div class="filter-form__actions">
+              <button type="submit" class="btn btn--primary">Найти квесты</button>
+              <button type="reset" class="btn btn--ghost">Сбросить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section catalog" id="catalog" aria-labelledby="catalog-title">
+      <div class="container">
+        <h2 id="catalog-title">Квесты в каталоге</h2>
+        <p class="section-note">
+          Шесть историй разной длины и сложности: от трёхчасовой комедии до девятичасового
+          хоррора. Все данные пока хранятся прямо в разметке страницы.
+        </p>
+
+        <div class="cards">
+
+          <article class="card">
+            <figure class="card__art">
+              <img src="assets/images/lighthouse.svg"
+                   alt="Ночной маяк освещает море жёлтым лучом"
+                   width="320" height="180" loading="lazy">
+            </figure>
+            <div class="card__body">
+              <h3 class="card__title">Пропавший маяк</h3>
+              <p class="card__desc">
+                Смотритель исчез в штормовую ночь. Восстановите картину событий по судовому
+                журналу, письмам и следам на пристани.
+              </p>
+              <dl class="card__meta">
+                <dt>Жанр</dt><dd>детектив</dd>
+                <dt>Год выпуска</dt><dd>2026</dd>
+                <dt>Сложность</dt><dd>средняя</dd>
+                <dt>Прохождение</dt><dd>~6 часов</dd>
+              </dl>
+            </div>
+          </article>
+
+          <article class="card">
+            <figure class="card__art">
+              <img src="assets/images/mansion.svg"
+                   alt="Тёмный особняк с двумя светящимися окнами"
+                   width="320" height="180" loading="lazy">
+            </figure>
+            <div class="card__body">
+              <h3 class="card__title">Пиксельный особняк</h3>
+              <p class="card__desc">
+                Восемь комнат, один наследник и семейная тайна, которая не любит гостей.
+                Классический хоррор с инвентарём и записками.
+              </p>
+              <dl class="card__meta">
+                <dt>Жанр</dt><dd>мистика и хоррор</dd>
+                <dt>Год выпуска</dt><dd>2026</dd>
+                <dt>Сложность</dt><dd>высокая</dd>
+                <dt>Прохождение</dt><dd>~9 часов</dd>
+              </dl>
+            </div>
+          </article>
+
+          <article class="card">
+            <figure class="card__art">
+              <img src="assets/images/cafe.svg"
+                   alt="Окно кофейни с тёплым светом и чашкой кофе на столике"
+                   width="320" height="180" loading="lazy">
+            </figure>
+            <div class="card__body">
+              <h3 class="card__title">Кофейня на Второй улице</h3>
+              <p class="card__desc">
+                Тёплая комедия о баристе, который пытается спасти кофейню и заодно
+                разобраться в чужих историях за стойкой.
+              </p>
+              <dl class="card__meta">
+                <dt>Жанр</dt><dd>комедия</dd>
+                <dt>Год выпуска</dt><dd>2026</dd>
+                <dt>Сложность</dt><dd>низкая</dd>
+                <dt>Прохождение</dt><dd>~3 часа</dd>
+              </dl>
+            </div>
+          </article>
+
+          <article class="card">
+            <figure class="card__art">
+              <img src="assets/images/station.svg"
+                   alt="Иллюминатор космической станции, за которым видна планета в кольцах"
+                   width="320" height="180" loading="lazy">
+            </figure>
+            <div class="card__body">
+              <h3 class="card__title">Станция «Юпитер-9»</h3>
+              <p class="card__desc">
+                Экипаж орбитальной станции не отвечает. Доберитесь до пульта управления
+                и решите, кого спасать первым.
+              </p>
+              <dl class="card__meta">
+                <dt>Жанр</dt><dd>научная фантастика</dd>
+                <dt>Год выпуска</dt><dd>2026</dd>
+                <dt>Сложность</dt><dd>средняя</dd>
+                <dt>Прохождение</dt><dd>~7 часов</dd>
+              </dl>
+            </div>
+          </article>
+
+          <article class="card">
+            <figure class="card__art">
+              <img src="assets/images/library.svg"
+                   alt="Книжные полки библиотеки, освещённые свечой"
+                   width="320" height="180" loading="lazy">
+            </figure>
+            <div class="card__body">
+              <h3 class="card__title">Тайна старой библиотеки</h3>
+              <p class="card__desc">
+                Каталог перепутан, а за переставленными книгами спрятаны подсказки.
+                Разгадайте шифр хранителя до закрытия читального зала.
+              </p>
+              <dl class="card__meta">
+                <dt>Жанр</dt><dd>фэнтези</dd>
+                <dt>Год выпуска</dt><dd>2026</dd>
+                <dt>Сложность</dt><dd>средняя</dd>
+                <dt>Прохождение</dt><dd>~5 часов</dd>
+              </dl>
+            </div>
+          </article>
+
+          <article class="card">
+            <figure class="card__art">
+              <img src="assets/images/tram.svg"
+                   alt="Ночной трамвай со светящимися окнами на пустой улице"
+                   width="320" height="180" loading="lazy">
+            </figure>
+            <div class="card__body">
+              <h3 class="card__title">Полночный трамвай</h3>
+              <p class="card__desc">
+                Последний трамвай едет по маршруту, которого нет на карте.
+                Найдите способ сойти на своей остановке.
+              </p>
+              <dl class="card__meta">
+                <dt>Жанр</dt><dd>мистика</dd>
+                <dt>Год выпуска</dt><dd>2026</dd>
+                <dt>Сложность</dt><dd>высокая</dd>
+                <dt>Прохождение</dt><dd>~8 часов</dd>
+              </dl>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section how" id="how" aria-labelledby="how-title">
+      <div class="container">
+        <div class="panel">
+          <h2 id="how-title">Как пользоваться каталогом</h2>
+
+          <ol class="steps">
+            <li class="step">
+              <h3>Задайте параметры</h3>
+              <p>
+                Введите часть названия в поле поиска или выберите жанр и сложность
+                в разделе «Поиск по каталогу».
+              </p>
+            </li>
+            <li class="step">
+              <h3>Сравните карточки</h3>
+              <p>
+                В каждой карточке указаны жанр, год выпуска, сложность загадок
+                и примерное время прохождения — этого достаточно, чтобы выбрать
+                квест под настроение и свободный вечер.
+              </p>
+            </li>
+            <li class="step">
+              <h3>Выберите вечер</h3>
+              <p>
+                Для короткого вечера подойдут «Кофейня на Второй улице» и «Тайна старой
+                библиотеки», для длинного — «Пиксельный особняк» и «Полночный трамвай».
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="panel">
+          <h2 id="about-title">О проекте</h2>
+          <p>
+            «Точка и клик» — учебный проект: каталог приключенческих игр, в которых
+            персонажем управляют мышью, а прогресс зависит от внимательности, а не от
+            скорости реакции. Сейчас это статическая страница: описания квестов и их
+            характеристики находятся прямо в HTML, а форма поиска только собирает условия.
+          </p>
+
+          <dl class="facts">
+            <dt>Для кого</dt>
+            <dd>для новичков в жанре и опытных игроков, которым нужен квест на вечер</dd>
+
+            <dt>Что дальше</dt>
+            <dd>рабочий поиск и фильтрация, отдельная страница квеста, загрузка данных с сервера</dd>
+
+            <dt>Технологии</dt>
+            <dd>HTML5 и CSS3 (Grid для сетки карточек, Flexbox для навигации и кнопок), без JavaScript</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__col">
+        <p class="site-footer__brand">Точка и клик</p>
+        <p>Каталог point-and-click квестов. Учебный проект, лабораторная работа № 1.</p>
+      </div>
+      <div class="site-footer__col">
+        <p>Иллюстрации — собственные SVG-файлы проекта.</p>
+        <p>
+          <a href="mailto:quest@example.com">quest@example.com</a> ·
+          <a href="#top">Наверх</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
